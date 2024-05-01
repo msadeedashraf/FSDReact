@@ -19,3 +19,5 @@ Babel
 https://babeljs.io/docs/babel-standalone
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+Compenents
+Name you components with UpperCase
