@@ -21,3 +21,16 @@ https://babeljs.io/docs/babel-standalone
 
 Compenents
 Name you components with UpperCase
+
+
+https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/help
+cmd
+change directory ------ cd 
+list of file in the directory ------ dir
+present working directory----------- pwd
+go back one directory ----- cd ..
+go back to the root ---- cd /
+
+
+Creating React App using CRA
+npx create-react-app name-of-the-application

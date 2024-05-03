@@ -18,7 +18,12 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      const courses = ["MongoDb", "HTML", "CSS", "CSharp", "Node", "React"];
+      const courses = ["React", "MongoDb", "HTML", "CSS", "CSharp", "Node"];
+
+      const coursesObj = courses.map((course, i) => ({
+        id: i,
+        courseTitle: course,
+      }));
 
       function Header(props) {
         return (
@@ -29,12 +34,20 @@
       }
 
       function Main(props) {
+        //console.log(props.courses);
         return (
           <section>
             <p>We are learning to {props.myLearn}</p>
+
+            <img
+              width={300}
+              height={200}
+              src="/FSDReact/day3/images/coding.jpg"
+              alt=""
+            />
             <ul>
               {props.courses.map((course) => (
-                <li>{course}</li>
+                <li key={course.id}>{course.courseTitle}</li>
               ))}
             </ul>
           </section>
@@ -45,12 +58,18 @@
         return <footer> Copy Right {props.year}</footer>;
       }
 
+      function App() {
+        return (
+          <React.Fragment>
+            <Header title="Learning React" />
+            <Main myLearn="program" courses={coursesObj} />
+            <Footer year={new Date().getFullYear()} />
+          </React.Fragment>
+        );
+      }
+
       ReactDOM.render(
-        <div>
-          <Header title="Learning React" />
-          <Main myLearn="program" courses={courses} />
-          <Footer year={new Date().getFullYear()} />
-        </div>,
+        <App />,
 
         document.getElementById("root")
       );
