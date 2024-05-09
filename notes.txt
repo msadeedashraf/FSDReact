@@ -34,3 +34,6 @@ go back to the root ---- cd /
 
 Creating React App using CRA
 npx create-react-app name-of-the-application
+
+prop drilling
+day7

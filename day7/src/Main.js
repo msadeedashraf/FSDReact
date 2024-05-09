@@ -25,17 +25,51 @@ const Main = () => {
     },
   ]);
 
+  const handelCheck = (id) => {
+    const listItems = items.map((item) =>
+      item.id === id ? { ...item, checked: !item.checked } : item
+    );
+
+    setItems(listItems);
+
+    localStorage.setItem("grocerylist", JSON.stringify(listItems));
+  };
+
+  const handelDelete = (id) => {
+    const listItems = items.filter((item) => item.id !== id);
+    setItems(listItems);
+
+    localStorage.setItem("grocerylist", JSON.stringify(listItems));
+  };
+
   return (
     <main>
-      <ul>
-        {items.map((item) => (
-          <li className="item" key={item.id}>
-            <input type="checkbox" checked={item.checked} />
-            <label>{item.item}</label>
-            <FaTrashAlt role="button" tabIndex="0" />
-          </li>
-        ))}
-      </ul>
+      {items.length ? (
+        <ul>
+          {items.map((item) => (
+            <li className="item" key={item.id}>
+              <input
+                onChange={() => handelCheck(item.id)}
+                type="checkbox"
+                checked={item.checked}
+              />
+              <label
+                style={item.checked ? { textDecoration: "line-through" } : null}
+                onDoubleClick={() => handelCheck(item.id)}
+              >
+                {item.item}
+              </label>
+              <FaTrashAlt
+                onClick={() => handelDelete(item.id)}
+                role="button"
+                tabIndex="0"
+              />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p style={{ marginTop: "2rem" }}>Your list is empty</p>
+      )}
     </main>
   );
 };
