@@ -1,7 +1,6 @@
 import React from "react";
 import { FaTrashAlt } from "react-icons/fa";
-const LineItem = (item, handelCheck, handelDelete) => {
-  console.log(item);
+const LineItem = ({ item, handelCheck, handelDelete }) => {
   return (
     <li className="item">
       <input
