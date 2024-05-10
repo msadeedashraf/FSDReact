@@ -1,13 +1,10 @@
 import React from "react";
-
 import { FaTrashAlt } from "react-icons/fa";
-
 const ItemList = ({ items, handelCheck, handelDelete }) => {
-  console.log(items);
   return (
     <ul>
       {items.map((item) => (
-        <li className="item">
+        <li key={item.id} className="item">
           <input
             onChange={() => handelCheck(item.id)}
             type="checkbox"
