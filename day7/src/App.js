@@ -1,6 +1,6 @@
 //import "./App.css";
 import "./style.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AddItemList from "./AddItemList";
 import SearchItem from "./SearchItem";
 
@@ -8,34 +8,28 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Main from "./Main";
 function App() {
-  const myStorageLocation = JSON.parse(localStorage.getItem("grocerylist"));
-
-  const [items, setItems] = useState(myStorageLocation);
-
+  const [items, setItems] = useState(
+    JSON.parse(localStorage.getItem("grocerylist")) || []
+  );
   const [newItem, setNewItem] = useState();
 
   const [search, setSearch] = useState();
+
+  useEffect(() => {
+    localStorage.setItem("grocerylist", JSON.stringify(items));
+  }, [items]);
 
   const addItem = (item) => {
     const id = items.length ? items[items.length - 1].id + 1 : 1;
 
     const myNewItem = { id, checked: false, item };
-    console.log(myNewItem);
 
     const listItems = [...items, myNewItem];
 
-    console.log(listItems);
-    setAndSaveItems(listItems);
-  };
-
-  const setAndSaveItems = (newItems) => {
-    setItems(newItems);
-
-    localStorage.setItem("grocerylist", JSON.stringify(newItems));
+    setItems(listItems);
   };
 
   const handleSubmit = (e) => {
-    //console.log("check my submit");
     e.preventDefault();
     if (!newItem) return;
     console.log(newItem);
@@ -48,12 +42,12 @@ function App() {
       item.id === id ? { ...item, checked: !item.checked } : item
     );
 
-    setAndSaveItems(listItems);
+    setItems(listItems);
   };
 
   const handleDelete = (id) => {
     const listItems = items.filter((item) => item.id !== id);
-    setAndSaveItems(listItems);
+    setItems(listItems);
   };
 
   return (
@@ -66,10 +60,7 @@ function App() {
         handleSubmit={handleSubmit}
       />
       <Main
-        items={items.filter((item) =>
-          item.item.toLowerCase().includes(search.toLowerCase())
-        )}
-        setItem={setItems}
+        items={items.filter((item) => item.item.includes(search))}
         handleCheck={handleCheck}
         handleDelete={handleDelete}
       />
