@@ -109,3 +109,8 @@ npx json-server -p 3500 -w data/db.json
 
   check the individual items with their ids  
   http://localhost:3500/items/1
+
+CRUD operation
+Create Read update and delete
+
+Read

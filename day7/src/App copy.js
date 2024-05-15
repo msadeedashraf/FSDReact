@@ -1,3 +1,4 @@
+//old App.js without json implementation
 //import "./App.css";
 import "./style.css";
 import { useState, useEffect } from "react";
@@ -10,46 +11,16 @@ import Main from "./Main";
 function App() {
   const API_URL = "http://localhost:3500/items";
 
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(
+    JSON.parse(localStorage.getItem("grocerylist")) || []
+  );
   const [newItem, setNewItem] = useState("");
 
   const [search, setSearch] = useState("");
 
-  /*
   useEffect(() => {
-    const fetchItem = async () => {};
-  }, []);
-*/
-  /*
-  useEffect(() => {
-    const fetchItem = async () => {
-try {
-
-}
-catch {
-
-}
-finally{
-
-}
-
-
-    };
-  }, []);
-*/
-  useEffect(() => {
-    const fetchItem = async () => {
-      try {
-        const response = await fetch(API_URL);
-        const listItems = await response.json();
-        setItems(listItems);
-      } catch (err) {
-        console.log(err.stack);
-      } finally {
-      }
-    };
-    (async () => await fetchItem())();
-  }, []);
+    localStorage.setItem("grocerylist", JSON.stringify(items));
+  }, [items]);
 
   const addItem = (item) => {
     const id = items.length ? items[items.length - 1].id + 1 : 1;
