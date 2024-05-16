@@ -1,19 +1,20 @@
 {
   "items": [
     {
-      "id": 1,
-      "checked": false,
-      "item": "Milk"
-    },
-    {
       "id": 2,
       "checked": false,
       "item": "Cake"
     },
     {
-      "id": 3,
-      "checked": false,
-      "item": "Bread"
+      "id": 1,
+      "checked": [
+        {
+          "id": 1,
+          "checked": true,
+          "item": "Milk"
+        }
+      ],
+      "item": "Milk"
     },
     {
       "id": 4,
@@ -22,11 +23,6 @@
     },
     {
       "id": 5,
-      "checked": false,
-      "item": "oranges"
-    },
-    {
-      "id": 6,
       "checked": false,
       "item": "banana"
     }
