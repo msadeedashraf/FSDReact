@@ -113,4 +113,9 @@ npx json-server -p 3500 -w data/db.json
 CRUD operation
 Create Read update and delete
 
-Read
+
+//React Router
+//installing router 
+
+npm install react-router-dom@6
+
