@@ -3,7 +3,7 @@ import React from "react";
 const Jobserach = () => {
   return (
     <main>
-      <section id="job-search" class="container">
+      <section id="job-search" className="container">
         <h1>Find Your Dream Job</h1>
         <form action="#" method="GET">
           <input

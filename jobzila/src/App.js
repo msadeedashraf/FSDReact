@@ -1,14 +1,15 @@
 import "./App.css";
 
-import Header from "./Header";
-import Footer from "./Footer";
-import Main from "./Main";
-import Contact from "./Contact";
-import Termsandservice from "./Termsandservice";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Main from "./components/Main";
+import Contact from "./components/Contact";
+import Termsandservice from "./components/Termsandservice";
 import { Route, Routes } from "react-router-dom";
-import Privacy from "./Privacy";
-import Jobserach from "./Jobserach";
-import Joblist from "./Joblist";
+import Privacy from "./components/Privacy";
+import Jobserach from "./components/Jobserach";
+import Joblist from "./components/Joblist";
+import Addjob from "./components/Addjob";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Jobsearch" element={<Jobserach />}></Route>
         <Route path="/Privacy" element={<Privacy />}></Route>
         <Route path="/Contact" element={<Contact />}></Route>
+        <Route path="/Addjob" element={<Addjob />}></Route>
         <Route path="/Termsandservice" element={<Termsandservice />}></Route>
       </Routes>
 
