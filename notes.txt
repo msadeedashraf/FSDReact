@@ -119,3 +119,54 @@ Create Read update and delete
 
 npm install react-router-dom@6
 
+/***************************************/
+MongoDB installation
+
+**MongoDB Community Server Download**
+[Download MongoDB Community Server](https://www.mongodb.com/try/download/community)
+[MongoDB Compass Download (GUI)](https://www.mongodb.com/try/download/compass)
+execute the compass (run the program)
+and press connect db
+
+
+
+[Download MongoDB Command Line Database Tools](https://www.mongodb.com/try/download/database-tools)
+chnage the path to C:\Program Files\MongoDB\Server\7.0\
+
+[Installing the Database Tools on Windows](https://www.mongodb.com/docs/database-tools/installation/installation-windows/)
+
+[MongoDB Shell Download](https://www.mongodb.com/try/download/shell)
+select package as .msi
+C:\Users\<your_usename>\AppData\Local\Programs\mongosh
+
+Execute the mongosh.exe
+press enter
+>show dbs
+
+//Importing the collection
+go to the mongoimport utility in the bin folder
+
+cd 'C:\Program Files\MongoDB\Server\7.0\bin\'
+
+and call mongoimport with any db name you like with the appropriate collections path.
+
+>mongoimport --db=cook --jsonArray D:\CBC\SEProject\fsd_jan_2024\react\FSDReact\mongoDB\collection\examples.json
+
+after all the files are uploaded from the collection folder.
+
+>show dbs
+
+switch the db to cook
+> use cook
+
+#### In MongoDB Documents are:
+
+a) Fields of strings, srrays and objects stored in Text
+b) Fields and values stored in JSON
+c) Fields with columns containing strings, numbers and booleans
+d) Field value pairs stored in BSON
+
+answer: D
+
+
+
