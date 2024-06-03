@@ -159,6 +159,16 @@ after all the files are uploaded from the collection folder.
 switch the db to cook
 > use cook
 
+> show collections
+>db.recipes.find();
+
+>db.recipes.find().count();
+
+
+>db.recipes.find({}, {"title":1}).limit(3);
+
+
+
 #### In MongoDB Documents are:
 
 a) Fields of strings, srrays and objects stored in Text
@@ -169,4 +179,49 @@ d) Field value pairs stored in BSON
 answer: D
 
 
+
+#### To find a Document with the title Apple Pie and return only the title:
+
+a) `db.recipes.find({"title": "Apple Pie"}, {"title": 1})`
+b) `db.recipes.find({"title": 1}, {"title": "Apple Pie"})`
+c) `db.recipes.find({"title": "Apple Pie"}, "title": 1)`
+d) `db.recipes.find({"title": "Apple Pie", "title": 1})`
+
+answer: a
+
+
+#### In a Document you can store:
+
+a) Just Strings and Numbers
+b) Strings, Arrays, Objects, Documents, Numbers, Booleans, Etc.
+c) Either Strings, Numbers or Booleans
+d) Multiple different kinds of Strings
+
+answer : B
+
+#### To sort by title in descending order you would use ...
+
+a) `db.collection.find({}).sort({"title" : 1})`
+b) `db.collection.find({"title" : -1}).sort()`
+c) `db.collection.find({}).sort({"title" : -1})`
+d) `db.collection.find({}, {"title": -1})`
+
+
+db.recipes.find({}, {"title":1, "cook_time":1}).sort({title:-1});
+
+
+create a recipe documnet with 4 fields one array object and one document inside an array
+
+********************************************************
+FTP
+
+FileZila
+
+WinSCP
+  FTPs://202.30.60.96
+  ipAddress : 202.30.60.96
+  userName: abc
+  password: *********
+
+  
 
