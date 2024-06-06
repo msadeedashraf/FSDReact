@@ -23,8 +23,8 @@ fs.readFile(path.join(__dirname,'files','first-file.txt'), 'utf8', (err, data)=>
 });
 */
 
-//Create a file
 
+//Create a file
 
 
 fs.writeFile(path.join(__dirname,'files','sync-file.txt'), 'Hello world from CBC', (err, data)=>{

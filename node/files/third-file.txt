@@ -1,3 +1,0 @@
-We are creating our third file using append
-
- and we are enjoying learning node FS
