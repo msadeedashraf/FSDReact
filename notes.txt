@@ -229,4 +229,44 @@ Node documentation  Link
 https://nodejs.org/docs/latest/api/
 
 
+NPM
+//https://www.npmjs.com
+/search
+/documentation
+https://docs.npmjs.com/
+//CLI
+
+//NPM Commands
+//To install NPM
+//>npm install 
+or 
+//>npm i
+or
+//>npm add
+
+//To install nodemon
+//https://www.npmjs.com/package/nodemon
+npm i nodemon -g
+
+
+//How to initializing the npm
+>npm init
+//this will generate the package.json file
+
+>npm init -y
+
+//add a package
+//npm i date-fns
+
+add .gitignore file in the root directory and place node_modules in it.
+
+//to include the node packages back run the install
+>npm install
+
+
+
+
+
+
+
 
