@@ -263,6 +263,54 @@ add .gitignore file in the root directory and place node_modules in it.
 //to include the node packages back run the install
 >npm install
 
+//To install the nodemon as a dev dependency.
+>npm i nodemon --save-dev
+or 
+>npm i nodemon -D
+
+in the package.json file add the following key-values
+"scripts": {
+    
+
+    "start" : "node index",
+    "dev" : "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+>npm start
+>npm run dev
+
+//Adding uuid dependency
+>npm i uuid
+
+
+
+ "nodemon": "^3.1.3"
+ "uuid": "^10.0.0"
+
+
+ "nodemon": "*" //get the latest version
+ "nodemon": "^3.1.3"
+ 3 means major version
+ 1 means minor version
+ 3 means patch version
+ "nodemon": "^3.1.3" install the latest minor version in 3 not the major
+ "nodemon": "~3.1.3" install the latest patch version in 3 not the major not the minor
+ "nodemon": "3.1.3" only this version
+
+ //Uninstalling the package
+ >npm un
+ >npm rm
+ >npm uninstall
+
+ -D
+ -g 
+
+
+
+
+
+
 
 
 
