@@ -1,9 +1,23 @@
-console.log("hello World from nodemon");
+const myEventLogs = require('./eventLog');
 
-console.log("welcome to CBC");
-
-const {format} = require('date-fns')
+const EventEmitter = require('events');
 
 
+class MyEmitter extends EventEmitter{};
 
-console.log(format(new Date(),'MM/dd/yyyy \t HH:mm:ss'));
+
+const myEmitter = new MyEmitter();
+
+
+myEmitter.on('mylogs', (msg)=>myEventLogs(msg));
+
+setTimeout(
+
+()=> {
+
+    myEmitter.emit('mylogs', 'log item emitted' );
+}
+
+, 2000);
+
+//fjdhksh
