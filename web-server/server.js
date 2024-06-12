@@ -9,20 +9,32 @@ const fs = require('fs');
 const path = require('path');
 const fsPromises = require('fs').promises;
 
-
+myEmitter.on('mylogs', (msg, fileName)=>myEventLogs(msg, fileName));
 const myPORT = process.env.PORT || 3600;
 
-/*
+
 const serveFile = async (filePath, contentType, response)=> {
 
     try{
 
-        
 
+        const rawData = await fsPromises.readFile(filePath, !contentType.includes('images') ? 'utf8' : '');
+        const data = contentType=== 'application/json' ? JSON.parse(rawData): rawData;
+
+        response.writeHead(
+        
+            filePath.includes('error_404.html')? 404: 200 ,
+            {'content-Type':contentType}
+        );
+        response.end(contentType=== 'application/json' ? JSON.stringify(data): data);
+        
 
     }
     catch (err) {
         console.log(err);
+        myEmitter.emit('mylogs', `${err.name} \t ${err.message}` ,'errorLogs.txt' );
+        response.statusCode = 500;
+        response.end();
 
 
     }
@@ -30,12 +42,13 @@ const serveFile = async (filePath, contentType, response)=> {
 
 
 }
-*/
 
 //http server
 const myServer =  http.createServer(
+    
 (req, res)=>{
 console.log(req.url, req.method);
+myEmitter.emit('mylogs', `${req.url} \t ${req.method}` ,'log.txt' );
 
 let filePath;
 /*
@@ -113,6 +126,7 @@ if (fileExixst)
 //get me the file
 //function to serve the page
 //serveFile();
+serveFile(filePath, contentType, res);
     }
 else
 {
@@ -134,7 +148,7 @@ else
     console.log(path.parse(filePath));
     //404
     //301 redirect
-
+serveFile(path.join(__dirname, 'views', 'error_404.html'), 'text/html', res);
 }
 }
 
@@ -160,7 +174,6 @@ myServer.listen(myPORT, ()=> console.log(`My server is using port ${myPORT}`));
 
 
 
-/*
-myEmitter.on('mylogs', (msg)=>myEventLogs(msg));
-    myEmitter.emit('mylogs', 'log item emitted' );
-*/
+
+//myEmitter.on('mylogs', (msg)=>myEventLogs(msg));
+ //   myEmitter.emit('mylogs', 'log item emitted' );

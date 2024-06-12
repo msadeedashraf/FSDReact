@@ -9,7 +9,7 @@ const {v4:uuid}= require('uuid');
 
 
 
-const eventLogs = async (myMessage) => {
+const eventLogs = async (myMessage, logName) => {
 
 const dateTime = `${format(new Date(),'MM/dd/yyyy HH:mm:ss')}`;    
 
@@ -27,7 +27,7 @@ try
             await fsPromises.mkdir(path.join(__dirname,'mylogs' ));
 
         }
-        await fsPromises.appendFile(path.join(__dirname, 'mylogs', 'myEventLog.txt'),logItem );
+        await fsPromises.appendFile(path.join(__dirname, 'mylogs', logName),logItem );
 
 }
 catch (err)
