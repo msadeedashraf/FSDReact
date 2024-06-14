@@ -21,13 +21,13 @@ console.log(logItem);
 try 
 {
 
-    if (!fs.existsSync(path.join(__dirname,'mylogs' )))
+    if (!fs.existsSync(path.join(__dirname,'..', 'mylogs' )))
         {
 
-            await fsPromises.mkdir(path.join(__dirname,'mylogs' ));
+            await fsPromises.mkdir(path.join(__dirname,'..', 'mylogs' ));
 
         }
-        await fsPromises.appendFile(path.join(__dirname, 'mylogs', logName),logItem );
+        await fsPromises.appendFile(path.join(__dirname,'..',  'mylogs', logName),logItem );
 
 }
 catch (err)
@@ -37,4 +37,13 @@ catch (err)
 
 }
 
-module.exports = eventLogs;
+
+const logger = (req, res, next)=>{
+
+    eventLogs(`${req.method}\t${req.headers.origin}\t${req.url}`, 'myreqLog.txt');
+    console.log(`${req.method}\t${req.path}`);
+    next();
+    
+    }
+
+module.exports = {logger, eventLogs};

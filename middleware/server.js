@@ -3,13 +3,22 @@ const path = require('path');
 const myPORT = process.env.PORT || 3400;
 
 const express = require('express');
-const { Console } = require('console');
 const app = express()
+const {logger} = require('./myCustomMiddleware/eventLog');
+
+
+//custom middleware
+app.use(logger);
+   
+
+
+
 
 
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(express.static(path.join(__dirname,'/public' )));
+
 
 
 app.get('^/$|/index(.html)?', (req, res) => {
