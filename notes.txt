@@ -330,6 +330,23 @@ Third Party
 //installing CORS 
 >npm i cors
 
+//routing
+
+
+//api Routes
+
+//http://localhost:3400/employees
+//http://localhost:3400/employees/1
+
+to test apis
+thunder client 
+or
+postman
+
+//n-tier 
+//MVC
+
+
 
 
 
