@@ -1,0 +1,11 @@
+06/17/2024 12:48:02	 7d60b0c3-d9bb-4308-b8ed-0e0b3a88eabb 	Error 	 Not allowed by CORS
+06/17/2024 12:48:32	 385e998e-faf2-4486-b09b-01a894f8d704 	Error 	 Not allowed by CORS
+06/17/2024 13:00:55	 91c60d4c-bbd9-47f2-b09a-a3baebdbe003 	Error 	 Not allowed by CORS
+06/17/2024 13:01:13	 c78c4ab1-476e-44a6-9215-fb18643ffdff 	Error 	 Not allowed by CORS
+06/18/2024 12:58:12	 ec1210e8-e996-4a2e-ac29-17a0c81508cf 	TypeError 	 res.json is not a function
+06/18/2024 13:00:13	 28b251cb-9e87-49c1-b2d9-c16caaf65317 	TypeError 	 res.json is not a function
+06/18/2024 13:04:38	 271e9040-9315-42c7-873c-5efbe8c3ae0a 	TypeError 	 res.json is not a function
+06/18/2024 13:04:43	 c62480be-1b1a-432d-a6cb-5c2bc7c8464b 	TypeError 	 res.json is not a function
+06/19/2024 12:17:46	 5f59b4d7-6e73-4425-a70b-7c0b3d9b19ff 	SyntaxError 	 Unexpected non-whitespace character after JSON at position 57
+06/19/2024 12:17:54	 633b2324-0dfc-48f2-809f-e1dd042870c3 	SyntaxError 	 Unexpected non-whitespace character after JSON at position 57
+06/19/2024 12:18:02	 3a226534-36bd-486b-ae20-47ce9896659d 	TypeError 	 data.setEmployees is not a function
