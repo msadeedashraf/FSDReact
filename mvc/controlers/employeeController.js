@@ -10,11 +10,13 @@ setEmployees : function(data) {this.employees= data }
 
 
 const getAllEmployees = (req, res) => {
+
     res.json(data.employees);
 }
 
 const updateEmployee = (req, res) => {
     const employee = data.employees.find(emp => emp.id === parseInt(req.body.id));
+    
     if (!employee) {
         return res.status(400).json({ "message": `Employee ID ${req.body.id} not found` });
     }
@@ -59,11 +61,30 @@ const deleteEmployee = (req, res) => {
 }
 
 const getEmployee = (req, res) => {
-    const employee = data.employees.find(emp => emp.id === parseInt(req.params.id));
+
+    //const employee = data.employees.find(emp => emp.id === parseInt(req.params.id));
+    /*
     if (!employee) {
         return res.status(400).json({ "message": `Employee ID ${req.params.id} not found` });
     }
+        */
+
+    //line 13 : res.json(data.employees);
+
+
+
+
+    const employee = data.employees.find(emp => emp.id === parseInt(req.params.id));
+    
+    if (!employee) {
+        return res.status(400).json({ "message": `Employee ID ${req.params.id} not found` });
+    }
+    
+
+
     res.json(employee);
+
+
 }
 
 
