@@ -337,6 +337,7 @@ Third Party
 
 //http://localhost:3400/employees
 //http://localhost:3400/employees/1
+//http://202.20.30.40:3400/employees/1
 
 to test apis
 thunder client 
@@ -345,6 +346,14 @@ postman
 
 //n-tier 
 //MVC
+
+//
+to install bcrypt
+>npm i bcrypt
+node.bcrypt.js
+https://www.npmjs.com/package/bcrypt
+
+https://codahale.com/how-to-safely-store-a-password/
 
 
 
