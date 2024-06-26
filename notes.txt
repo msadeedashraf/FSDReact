@@ -387,6 +387,23 @@ REFRESH_TOKEN_SECRET = //token_value
 
 and make sure its part of the gitignore file
 
+to register a user 
+method:  post
+url : http://localhost:3400/register
+ {
+        "user":"sadeed11","pwd":"abc12302@"
+       }
+
+method:  post
+url : http://localhost:3400/auth
+ {
+        "user":"sadeed11","pwd":"abc12302@"
+       }
+
+method:  get
+url : http://localhost:3400/employees
+
+with the token value in the Auth/Bearer
 
 
 

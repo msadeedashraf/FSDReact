@@ -1,6 +1,8 @@
 
 const path = require('path');
+
 const myPORT = process.env.PORT || 3400;
+const cookieParser = require('cookie-parser');
 
 const express = require('express');
 const app = express()
@@ -10,9 +12,15 @@ const errorHandler = require('./myCustomMiddleware/errorHandler');
 
 const cors = require('cors');
 const corsOptions = require('./controlers/corsController');
+const verifyJWT = require('./myCustomMiddleware/verifyJWT')
 
 //custom middleware
 app.use(logger);
+
+
+//middleware for cookies
+app.use(cookieParser());
+
 
 app.use(cors(corsOptions));
 
@@ -27,7 +35,10 @@ app.use('/', require('./routes/root'));
 
 app.use('/register', require('./routes/register'));
 app.use('/auth', require('./routes/auth'));
+app.use('/refresh', require('./routes/refresh'));
 
+
+app.use(verifyJWT);
 app.use('/employees', require('./routes/api/employees'));
 
 

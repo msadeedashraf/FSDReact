@@ -30,7 +30,7 @@ const handleLogin = async (req, res)=>{
 
             {"username": foundUser.username },
             process.env.ACESS_TOKEN_SECRET,
-             {expiresIn : '40s'}
+             {expiresIn : '30s'}
 
         );
 
@@ -39,12 +39,12 @@ const handleLogin = async (req, res)=>{
 
             {"username": foundUser.username },
             process.env.REFRESH_TOKEN_SECRET,
-             {expiresIn : '40s'}
+             {expiresIn : '30s'}
 
         );
         
 
-        const otherUsers = usersDB.user.filter(person => person.username !== foundUser.username);
+        const otherUsers = usersDB.users.filter(person => person.username !== foundUser.username);
 
         const currentUser = {...foundUser, refreshToken};
 
