@@ -355,13 +355,28 @@ https://www.npmjs.com/package/bcrypt
 
 https://codahale.com/how-to-safely-store-a-password/
 
-//to register a new user/test
 
-http://localhost:3400/register
+//to register a new user/test
+method : post
+url : http://localhost:3400/register
+
 body
 {
    "user":"sadeed10","pwd":"abc12302@"
   }
+
+//To test user authentication
+method : post
+url : http://localhost:3500/auth
+
+body
+{
+   "user":"sadeed10","pwd":"abc12302@"
+  }
+
+//get all employees
+method : get
+url : http://localhost:3500/employees
 
 
 

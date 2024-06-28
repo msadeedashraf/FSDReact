@@ -58,7 +58,8 @@ const handleLogin = async (req, res)=>{
         );
 
 
-        res.cookie('jwt', refreshToken, {httpOnly: true , sameSite : 'None',secure : true, maxAge: 24*60*60*1000});
+        //res.cookie('jwt', refreshToken, {httpOnly: true , sameSite : 'None',secure : true, maxAge: 24*60*60*1000}); //for production env
+        res.cookie('jwt', refreshToken, {httpOnly: true , sameSite : 'None', maxAge: 24*60*60*1000}); //on development env
         res.json(accessToken);
 
        // res.json({ 'success': `User ${user} is logged in!` });
