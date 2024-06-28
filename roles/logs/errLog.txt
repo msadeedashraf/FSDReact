@@ -1,0 +1,10 @@
+20240628	12:17:45	459c6f09-9843-4cab-a434-35ed5b1f4ddd	TypeError: rolesArray.includes(...).find is not a function
+20240628	12:21:34	c29ccdd1-fe5c-46e0-8f8b-031b51a848cc	TypeError: rolesArray.includes(...).find is not a function
+20240628	12:22:43	b2332801-491e-4f6f-8a68-f98319b43bb1	TypeError: req.sendStatus is not a function
+20240628	12:23:28	048b8ce6-d098-452c-9b5f-4b8452a6e6b0	TypeError: req.sendStatus is not a function
+20240628	12:24:53	843dceaf-63d2-4e1f-84d4-b43006d64098	TypeError: req.sendStatus is not a function
+20240628	12:26:58	0c290659-7944-4532-80f4-0198c9272f4c	TypeError: req.sendStatus is not a function
+20240628	12:31:25	b9797958-fc9b-47d3-a296-73548e591391	SyntaxError: Unexpected non-whitespace character after JSON at position 67
+20240628	12:33:26	3ef7592f-14d3-4c3e-9cb6-9271124d1f68	TypeError: req.sendStatus is not a function
+20240628	12:35:18	b737eb0f-b394-41b8-9ca4-37e305cd98d4	TypeError: req.sendStatus is not a function
+20240628	13:05:53	99eaef93-c200-4584-b0d6-21f2653aa6bf	TypeError: req.sendStatus is not a function
