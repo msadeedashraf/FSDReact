@@ -32,6 +32,10 @@ go back one directory ----- cd ..
 go back to the root ---- cd /
 
 
+
+
+
+
 Creating React App using CRA
 npx create-react-app name-of-the-application
 
@@ -420,9 +424,27 @@ url : http://localhost:3400/employees
 
 with the token value in the Auth/Bearer
 
+//////////////Incorporating the mongoDB and Schema
+//folder mongodbschema
+
+https://www.mongodb.com/
+signin
+https://cloud.mongodb.com/v2#/org/6655cda81e41fc386437f688/projects/create
 
 
+connection string
+mongodb+srv://test:<password>@employeedb.ygycrtb.mongodb.net/?retryWrites=true&w=majority&appName=employeeDB
 
+mongodb+srv://<username>:<password>@<databasename>.ygycrtb.mongodb.net/?retryWrites=true&w=majority&appName=<databasename>
+
+Mongoose documentation
+https://mongoosejs.com/docs/guide.html
+
+Install mongoose
+>npm i mongoose
+
+
+https://mongoosejs.com/docs/models.html
 
 
 
