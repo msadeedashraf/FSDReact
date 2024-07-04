@@ -1,13 +1,13 @@
 {
-  "name": "10tut",
+  "name": "express",
   "version": "1.0.0",
-  "description": "Express tutorial",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server",
     "dev": "nodemon server"
   },
-  "author": "Dave Gray",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",

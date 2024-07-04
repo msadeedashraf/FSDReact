@@ -9,7 +9,6 @@ const fsPromises = require('fs').promises;
 const path = require('path');
 */
 const User = require('../model/User');
-
 const bcrypt = require('bcrypt');
 
 const handleNewUser = async (req, res) => {
