@@ -10,6 +10,13 @@ https://www.youtube.com/playlist?list=PL1w1q3fL4pmj9k1FrJ3Pe91EPub2_h4jF
 TypeScript Intro
 https://www.youtube.com/watch?v=d56mG7DezGs&ab_channel=ProgrammingwithMosh
 
+Learning Angular
+https://angular.dev/tutorials/first-app
+Documnetation
+https://angular.dev/overview
+
+More Learning Resources
+https://www.freecodecamp.org/learn/
 
 
 setup
