@@ -10,6 +10,7 @@ import Privacy from "./components/Privacy";
 import Jobserach from "./components/Jobserach";
 import Joblist from "./components/Joblist";
 import Addjob from "./components/Addjob";
+import Jobpage from "./components/Jobpage";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Main />}></Route>
-        <Route path="/Joblist" element={<Joblist />}></Route>
+        <Route path="/Joblist" element={<Jobpage />}></Route>
         <Route path="/Jobsearch" element={<Jobserach />}></Route>
         <Route path="/Privacy" element={<Privacy />}></Route>
         <Route path="/Contact" element={<Contact />}></Route>

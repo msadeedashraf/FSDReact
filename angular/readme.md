@@ -20,7 +20,7 @@ https://www.freecodecamp.org/learn/
 
 
 setup
->npm install -g @angular/cli
+>
 
 to create a hello-world app
 >ng new hello-world

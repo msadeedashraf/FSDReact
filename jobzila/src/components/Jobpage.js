@@ -39,7 +39,6 @@ const Jobpage = () => {
         fetchError={fetchError}
         isLoading={isLoading}
       />
-      <Addjob jobs={jobs} setJobs={setJobs} setFetchError={setFetchError} />
     </main>
   );
 };
